@@ -15,4 +15,4 @@ with st.container():
 #     st.session_state['clicker'] += 1
 
 
-st.number_input('Choose number', key='my_number')
+st.number_input('Choose number', key='my_number', value=st.session_state.get('my_number'))
