@@ -15,7 +15,7 @@ def action():
     st.session_state.cliker += 1
 
 
-st.session_state.name = st.text_input()
+st.session_state.name = st.text_input('choose name')
 st.session_state.cliker = 0
 
 f'hi, {st.session_state.name}'
