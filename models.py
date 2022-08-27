@@ -3,4 +3,4 @@ from typing import Optional
 
 
 class SCObject(BaseModel):
-    _id: Optional[int]
+    some_id: Optional[int]
