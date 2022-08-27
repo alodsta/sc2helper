@@ -3,5 +3,5 @@ import streamlit as st
 from models import SCObject
 
 
-obj = SCObject()
+obj = SCObject(_id='qwerty')
 st.write(obj)
