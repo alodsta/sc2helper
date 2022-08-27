@@ -4,3 +4,6 @@ from typing import Optional
 
 class SCObject(BaseModel):
     some_id: Optional[int]
+
+    def some_method(self):
+        pass
