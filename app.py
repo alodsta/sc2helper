@@ -18,7 +18,7 @@ def action():
 if 'clicker' not in st.session_state:
     st.session_state['clicker'] = 0
 
-if 'name' in st.session_state:
+if 'name' in st.session_state and bool(st.session_state.name):
     st.write(f'hi, {st.session_state.name}')
 
 st.session_state['name'] = st.text_input('What is ur name?')
