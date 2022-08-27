@@ -1,5 +1,6 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class SCObject(BaseModel):
-    id: int | None
+    _id: Optional[int]
