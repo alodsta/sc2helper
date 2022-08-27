@@ -12,12 +12,16 @@ with st.container():
 
 
 def action():
-    st.session_state.cliker += 1
+    st.session_state['clicker'] += 1
 
 
-st.session_state.name = st.text_input('choose name')
-st.session_state.cliker = 0
+if 'clicker' not in st.session_state:
+    st.session_state['clicker'] = 0
 
-f'hi, {st.session_state.name}'
+if 'name' in st.session_state:
+    st.write(f'hi, {st.session_state.name}')
+
+st.session_state['name'] = st.text_input('What is ur name?')
+
 st.button('reload', on_click=action)
-f'cliker: {st.session_state.cliker}'
+f'cliker: {st.session_state.clicker}'
