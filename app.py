@@ -12,12 +12,12 @@ with st.container():
 
 
 def action():
-    pass
+    st.session_state.cliker += 1
 
 
 st.session_state.name = st.text_input()
 st.session_state.cliker = 0
 
 f'hi, {st.session_state.name}'
-st.button('reload', on_click=lambda: (st.session_state.cliker := st.session_state.cliker + 1))
+st.button('reload', on_click=action)
 f'cliker: {st.session_state.cliker}'
